@@ -2,34 +2,48 @@
 <head>
     <title>TicTacToe</title>
     <link rel="stylesheet" href="tiktactoe.css" />
-    <script src="script.js"></script>
     <meta charset="UTF-8">
 </head>
 <body>
-    <h2>IKSIUKAI-NULIUKAI</h2>
-    <div class="players" id="container">
-        <div class="player1 player" id="player100">Player1</div>
-        <div class="player2 player" id="player200">Player2</div>
-        <div id="playerWins">0:0</div>
+    <h2>KRYŽIUKAI-NULIUKAI</h2>
+    <div class="first" id="first">
+        <img class="picture" src="x-o's.png" alt="žaidimas">
+        <button class="PLAY" id="PLAY" onclick="divHide('first'), divHide('registration')">ŽAISTI!</button>
+        <p>Šį žaidimą suprogramavo 2 kurso, 2 grupės, 2 pogrupio studentė Evelina Sasnauskaitė</p>
     </div>
-    <div class="markings" id="board">
-        <table>
-            <tr>
-                <td class="place game7" value="" id="7" onclick="move('7')"></td>
-                <td class="place game8" value="" id="8" onclick="move('8')"></td>
-                <td class="place game9" value="" id="9" onclick="move('9')"></td>
-            </tr>
-            <tr>
-                <td class="place game4" value="" id="4" onclick="move('4')"></td>
-                <td class="place game5" value="" id="5" onclick="move('5')"></td>
-                <td class="place game6" value="" id="6" onclick="move('6')"></td>
-            </tr>
-            <tr>
-                <td class="place game1" value="" id="1" onclick="move('1')"></td>
-                <td class="place game2" value="" id="2" onclick="move('2')"></td>
-                <td class="place game3" value="" id="3" onclick="move('3')"></td>
-            </tr>
-        </table>
+    <div class="reg" id="registration">
+        <p>Pirmojo žaidėjo vardas:</p>
+        <input class="input" type="text" id="player111">
+        <p>Antrojo žaidėjo vardas:</p>
+        <input class="input" type="text" id="player222"><br>
+        <button class="LETSPLAY" onclick="saveNames(), divHide('registration'), divHide('fullGame')">Pradėti žaidimą!</button>
     </div>
-    <p></p>
+    <div class="fullGame" id="fullGame">
+        <div class="players" id="container">
+            <div class="player1 player" id="player100"></div>
+            <div class="player2 player" id="player200"></div>
+            <div id="playerWins"></div>
+        </div>
+        <div class="markings" id="board">
+            <table>
+                <tr>
+                    <td class="place game7" value="" id="7" onclick="move('7')"></td>
+                    <td class="place game8" value="" id="8" onclick="move('8')"></td>
+                    <td class="place game9" value="" id="9" onclick="move('9')"></td>
+                </tr>
+                <tr>
+                    <td class="place game4" value="" id="4" onclick="move('4')"></td>
+                    <td class="place game5" value="" id="5" onclick="move('5')"></td>
+                    <td class="place game6" value="" id="6" onclick="move('6')"></td>
+                </tr>
+                <tr>
+                    <td class="place game1" value="" id="1" onclick="move('1')"></td>
+                    <td class="place game2" value="" id="2" onclick="move('2')"></td>
+                    <td class="place game3" value="" id="3" onclick="move('3')"></td>
+                </tr>
+            </table>
+        </div>
+        <p></p>
+    </div>
+    <script src="script.js"></script>
 </body>

@@ -20,16 +20,13 @@ function saveNames() {
   score1=0;
   score2=0;
   var text = "<h2>" + score1 + ':' + score2 + "</h2>";
-  console.log(text);
   document.getElementById("playerWins").innerHTML = text;
-  // document.getElementById("player1wins").innerHTML = score1;
-  // document.getElementById("player2wins").innerHTML = score2;
   player1=document.getElementById("player111").value;
   player2=document.getElementById("player222").value;
-  // document.getElementById("play1").innerHTML=player1;
-  // document.getElementById("play2").innerText=player2;
-  document.getElementById("player100").value=player1;
-  document.getElementById("player200").value=player2;
+  text = "<h2>" + player1 + "</h2>";
+  document.getElementById("player100").innerHTML=text;
+  text = "<h2>" + player2 + "</h2>";
+  document.getElementById("player200").innerHTML=text;
 }
 function move(val) {
   document.getElementById(val).innerHTML="<h1>"+plr[player_]+"</h1>";
@@ -54,18 +51,14 @@ function check() {
   var endGame=false;
   var j=0;
   for(let i=0; i<8; i++) {
-    console.log(i);
-    console.log(win[i][j], " ", win[i][j+1], " ", win[i][j+2]);
     if(document.getElementById(win[i][j]).value=='<h1>X</h1>' && document.getElementById(win[i][j+1]).value=='<h1>X</h1>' && 
     document.getElementById(win[i][j+2]).value=='<h1>X</h1>') {
-      console.log("Laimėjo");
       winnerName=player1;
       endGame=true;
     }
     else if(document.getElementById(win[i][j]).value=='<h1>O</h1>' && document.getElementById(win[i][j+1]).value=='<h1>O</h1>' && 
     document.getElementById(win[i][j+2]).value=='<h1>O</h1>') {
-      console.log("Laimėjo");
-      winnerName=palyer2;
+      winnerName=player2;
       endGame=true;
     }
   }
@@ -74,20 +67,21 @@ function check() {
 function winner() {
   if(winnerName==player1) {
     score1+=1;
-    document.getElementById("player1wins").innerHTML = score1;
+    var text = "<h2>" + score1 + ':' + score2 + "</h2>";
+    document.getElementById("playerWins").innerHTML = text;
     document.getElementById("board").innerHTML="<h1>Laimėjo "+ winnerName+ "!</h1><br>";
     document.getElementById("board").innerHTML+="<input type='submit' class='PLAYMORE' id='submit' value='Žaisti toliau' onclick='playMore()'></input>"
   }
   else if(winnerName==player2) {
     score2+=1;
-    document.getElementById("player2wins").innerHTML = score2;
+    text = "<h2>" + score1 + ':' + score2 + "</h2>";
+    document.getElementById("playerWins").innerHTML = text;
     document.getElementById("board").innerHTML="<h1>Laimėjo "+ winnerName+ "!</h1><br>";
-    document.getElementById("board").innerHTML+="<input type='submit' class='PLAYMORE' id='submit' value='Žaisti toliau' onclick='playMore()'></input>"
+    document.getElementById("board").innerHTML+="<input type='button' class='PLAYMORE' id='submit' value='Žaisti toliau' onclick='playMore()'></input>"
   }
 }
 function playMore() {
   document.getElementById('board').innerHTML = 
-  "<div class='markings' id='board'>"+
         "<table>"+
             "<tr>"+
                 "<td class='place game7' value='' id='7' onclick='move('7')'></td>"+
@@ -104,6 +98,15 @@ function playMore() {
                 "<td class='place game2' value='' id='2' onclick='move('2')'></td>"+
                 "<td class='place game3' value='' id='3' onclick='move('3')'></td>"+
             "</tr>"+
-        "</table>"+
-    "</div>";
+        "</table>";
+}
+divHide("registration");
+divHide("fullGame");
+function divHide(variable) {
+  var x = document.getElementById(variable);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }

@@ -25,7 +25,10 @@
         <button class="PLAYonStopped" id="PLAYonStopped" onclick="stopGame()">ŽAISTI TOLIAU</button><br><br>
         <button class="newPLAYonStopped" id="newPLAYonStopped" onclick="playNew()">NAUJAS ŽAIDIMAS</button>
     </div>
-    <div class="winning" id="winning"></div>
+    <div class="winning" id="winning">
+        <h1 id="winningTell"></h1><br>
+        <input type='button' class='PLAYMORE' id='submit' value='Žaisti dar' onclick='playMore(), divHide("winning")'></input>
+    </div>
     <div class="fullGame" id="fullGame">
         <div class="players" id="container">
             <div class="player1 player" id="player100"></div>
@@ -52,7 +55,6 @@
                 </tr>
             </table>
         </div>
-        <p></p>
     </div>
     <script src="script.js"></script>
 </body>

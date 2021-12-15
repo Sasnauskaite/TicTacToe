@@ -92,8 +92,8 @@ function winner() {
     var text = "<h1>" + score1 + ':' + score2 + "</h1>";
     document.getElementById("playerWins").innerHTML = text;
     document.getElementById("playerWins1").innerHTML = text;
-    document.getElementById("winning").innerHTML="<h1>Laimėjo "+ winnerName+ "!</h1><br>";
-    document.getElementById("winning").innerHTML+="<input type='submit' class='PLAYMORE' id='submit' value='Žaisti dar' onclick='playMore(), divHide('winning')'></input>";
+    document.getElementById("winningTell").innerHTML="Laimėjo "+winnerName+ "!";
+    //document.getElementById("winning").innerHTML+="<input type='submit' class='PLAYMORE' id='submit' value='Žaisti dar' onclick='playMore(), divHide('winning')'></input>";
     divHide("winning");
   }
   else if(winnerName==player2) {
@@ -101,8 +101,8 @@ function winner() {
     text = "<h1>" + score1 + ':' + score2 + "</h1>";
     document.getElementById("playerWins").innerHTML = text;
     document.getElementById("playerWins1").innerHTML = text;
-    document.getElementById("winning").innerHTML="<h1>Laimėjo "+ winnerName+ "!</h1><br>";
-    document.getElementById("winning").innerHTML+="<input type='button' class='PLAYMORE' id='submit' value='Žaisti dar' onclick='playMore(), divHide('winning')'></input>";
+    document.getElementById("winningTell").innerHTML="Laimėjo "+winnerName+ "!";
+    //document.getElementById("winning").innerHTML+="<input type='button' class='PLAYMORE' id='submit' value='Žaisti dar' onclick='playMore(), divHide('winning')'></input>";
     divHide("winning");
   }
 }
@@ -110,20 +110,30 @@ function noWin() {
   var text = "<h1>" + score1 + ':' + score2 + "</h1>";
   document.getElementById("playerWins").innerHTML = text;
   document.getElementById("playerWins1").innerHTML = text;
-  document.getElementById("winning").innerHTML="<h1>Lygiosios!</h1><br>";
-  document.getElementById("winning").innerHTML+="<input type='button' class='PLAYMORE' id='submit' value='Žaisti dar' onclick='playMore(), divHide('winning')'></input>";
+  document.getElementById("winningTell").innerHTML="Lygiosios!";
   divHide("winning");
 }
 function playMore() {
-  document.getElementById('1').innerHTML = undefined;
-  document.getElementById('2').innerHTML = undefined;
-  document.getElementById('3').innerHTML = undefined;
-  document.getElementById('4').innerHTML = undefined;
-  document.getElementById('5').innerHTML = undefined;
-  document.getElementById('6').innerHTML = undefined;
-  document.getElementById('7').innerHTML = undefined;
-  document.getElementById('8').innerHTML = undefined;
-  document.getElementById('9').innerHTML = undefined;
+  var something = '';
+  document.getElementById('1').innerHTML = something;
+  document.getElementById('2').innerHTML = something;
+  document.getElementById('3').innerHTML = something;
+  document.getElementById('4').innerHTML = something;
+  document.getElementById('5').innerHTML = something;
+  document.getElementById('6').innerHTML = something;
+  document.getElementById('7').innerHTML = something;
+  document.getElementById('8').innerHTML = something;
+  document.getElementById('9').innerHTML = something;
+  
+  document.getElementById('1').value = something;
+  document.getElementById('2').value = something;
+  document.getElementById('3').value = something;
+  document.getElementById('4').value = something;
+  document.getElementById('5').value = something;
+  document.getElementById('6').value = something;
+  document.getElementById('7').value = something;
+  document.getElementById('8').value = something;
+  document.getElementById('9').value = something;
 }
 divHide("registration");
 divHide("fullGame");

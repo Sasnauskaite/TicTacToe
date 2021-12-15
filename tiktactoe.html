@@ -18,11 +18,20 @@
         <input class="input" type="text" id="player222"><br>
         <button class="LETSPLAY" onclick="saveNames(), divHide('registration'), divHide('fullGame')">Pradėti žaidimą!</button>
     </div>
+    <div class="stopped" id="stopped">
+        <div class="player1 player" id="player10"></div>
+        <div class="player2 player" id="player20"></div>
+        <div id="playerWins1"></div>
+        <button class="PLAYonStopped" id="PLAYonStopped" onclick="stopGame()">ŽAISTI TOLIAU</button><br><br>
+        <button class="newPLAYonStopped" id="newPLAYonStopped" onclick="playNew()">NAUJAS ŽAIDIMAS</button>
+    </div>
+    <div class="winning" id="winning"></div>
     <div class="fullGame" id="fullGame">
         <div class="players" id="container">
             <div class="player1 player" id="player100"></div>
             <div class="player2 player" id="player200"></div>
             <div id="playerWins"></div>
+            <div id="stop"><button class="btnStop" id="btnStop" onclick="stopGame()">STOP</button></div>
         </div>
         <div class="markings" id="board">
             <table>

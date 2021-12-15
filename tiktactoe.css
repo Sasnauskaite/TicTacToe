@@ -1,5 +1,5 @@
 body {
-    background-color:rgb(169, 214, 205);
+    background-color:rgb(128, 190, 177);
     align-items: center;
 }
 @media screen and (orientation: portrait) {
@@ -23,15 +23,36 @@ body {
         padding-bottom: 10%;
     }
     .input {
-        margin-left: 33%;
+        margin-left: 18%;
         padding: 40px 70px;
+        font-size: 250%;
+    }
+    .btnStop {
+        /* padding: 10px; */
+        font-size: 250%;
     }
     .LETSPLAY {
         font-size: 200%;
         margin-left: 33%;
     }
     .PLAYMORE {
-        margin-left: 44%;
+        margin-left: 38%;
+        font-size: 250%;
+    }
+    .PLAY {
+        margin-left: 38%;
+        padding: 20px 35px;
+        font-size: 250%;
+    }
+    .PLAYonStopped {
+        margin-left: 34%;
+        padding: 20px 35px;
+        font-size: 250%;
+    }
+    .newPLAYonStopped {
+        margin-left: 30%;
+        padding: 20px 35px;
+        font-size: 250%;
     }
     td {
         height: 200px;
@@ -45,8 +66,8 @@ body {
         margin-left: 0;
     }
     .player {
-        padding: 40px, 40px;
-        font-size: 40px;
+        padding: 20px, 20px;
+        font-size: 15px;
     }
     p {
         font-size: 250%;
@@ -97,7 +118,19 @@ body {
         margin-bottom: 0;
     }
     .PLAYMORE {
+        margin-left: 40%;
+    }
+    .PLAY {
         margin-left: 44%;
+        padding: 20px 35px;
+    }
+    .PLAYonStopped {
+        margin-left: 44%;
+        padding: 20px 35px;
+    }
+    .newPLAYonStopped {
+        margin-left: 40%;
+        padding: 20px 35px;
     }
     td {
         height: 100px;
@@ -111,7 +144,7 @@ body {
         margin-left: 25%;
     }
     .player {
-        padding: 1px;
+        padding: 5px;
         font-size: 100%;
     }
     p {
@@ -135,6 +168,10 @@ img {
     background-color: rgb(159, 223, 210);
     border-radius: 20px;
 }
+.btnStop {
+    border: 2px outset rgb(0, 116, 92);
+    background-color: rgb(84, 168, 151);
+}
 .LETSPLAY {
     align-self: center;
     text-align: center;
@@ -145,9 +182,21 @@ img {
 }
 .PLAY {
     align-self: center;
-    margin-left: 44%;
     text-align: center;
-    padding: 20px 35px;
+    border: 2px outset rgb(0, 116, 92);
+    background-color: rgb(84, 168, 151);
+    border-radius: 20px;
+}
+.PLAYonStopped {
+    align-self: center;
+    text-align: center;
+    border: 2px outset rgb(0, 116, 92);
+    background-color: rgb(84, 168, 151);
+    border-radius: 20px;
+}
+.newPLAYonStopped {
+    align-self: center;
+    text-align: center;
     border: 2px outset rgb(0, 116, 92);
     background-color: rgb(84, 168, 151);
     border-radius: 20px;
